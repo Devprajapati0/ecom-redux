@@ -1,0 +1,39 @@
+.main{
+    display: flex;
+    height: 3vw;
+    justify-content: space-between;
+    margin: 3vw;
+    border-bottom: 0.1vw solid #dadada;
+}
+.main .righ{
+    display: flex;
+    gap: 5vw;
+}
+
+#sily{
+    width: 4vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin-top: 0vw;
+    background-color: aliceblue;
+
+}
+#sily img{
+    width: 4vw;
+    height: 3vw;
+    margin-top: -1vw;
+
+}
+
+@media (max-width:600px){
+    .main{
+        border-bottom: none;
+        font-size:xx-large;
+    }
+}
+@media (min-width:600px){
+    .main{
+        border-bottom: none;
+        font-size:xx-large;
+    }
+}
