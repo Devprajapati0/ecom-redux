@@ -1,135 +1,131 @@
-.main-dic{
-    
-   
+/* Main container for the products */
+.main-dic {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    gap: 20px; /* Adds spacing between product cards */
+    justify-content: center;
+    padding: 20px;
 }
 
-
-.first-one{
-    height: 28vw;
-    width: 27vw;
-    padding: 6.5vw;
-    margin: 3vw;
-  
-    
-
+/* Individual Product Card */
+.first-one {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 280px; /* Default width */
+    height: 420px; /* Fixed height for all cards */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures button stays at the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.first-one img{
-    height: 10vw;
+/* Hover effect for the product card */
+.first-one:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15); /* Enhance the shadow */
+}
+
+/* Product Image Styling */
+.first-one img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Maintain consistent image size */
     object-fit: contain;
-    margin-bottom: 2vw;
-
-
-    
-
-}
-span{
-    font-size: larger;
-    font-weight: 500;
-}
-button{
-    margin: 0.9vw 0.4vw;
-    padding: 0.5vw;
-    background-color: rgb(11, 155, 195);
-    border-radius: 0.5vw;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-button:hover{
-    background-color: rgb(9, 130, 163);
-}
-@media screen and (max-width:600px){
-    .main-dic{
-        display: flex;
-        flex-direction: wrap;
-    }
-    .first-one{
-        height: 80vw;
-        width: 40vw;
-        padding: 6vw;
-        
-        margin: 20vw 26vw;
-        
-      
-        
-    
-    }
-    button{
-        margin-top: 5vw;
-    }
-    .first-one img{
-        height: 40vw;
-        object-fit: contain;
-        margin-bottom: 2vw;
-    
-    
-        
-    
-    }
-}
-@media screen and (min-width:600px){
-    .main-dic{
-        display: flex;
-        flex-wrap: wrap;
-        
-        
-    }
-    .first-one{
-        height: 80vw;
-        width: 40vw;
-        padding: 6vw;
-        
-        margin: 4vw 4.5vw;
-        
-      
-        
-    
-    }
-    button{
-        margin-top: 5vw;
-    }
-    .first-one img{
-        height: 30vw;
-        object-fit: contain;
-        margin-bottom: 2vw;
-    
-    
-        
-    
-    }
-    
+/* Image zoom effect on hover */
+.first-one img:hover {
+    transform: scale(1.05);
 }
 
-@media screen and (min-width:1200px){
-    .main-dic{
-    
-   
-        display: flex;
-        flex-wrap: wrap;
-        position: relative;
+/* Product Title */
+.first-one h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent title from wrapping */
+}
+
+/* Product Price */
+.first-one h3 {
+    font-size: 1rem;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+/* Add to Cart Button */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s ease;
+    width: 100%; /* Make button span full width */
+    margin-top: auto; /* Ensure button stays at the bottom of the card */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Lift button on hover */
+}
+
+/* Button active state */
+button:active {
+    transform: translateY(1px); /* Slight push effect when button is clicked */
+}
+
+/* Responsive Design */
+
+/* For Small Screens (Mobile Devices) */
+@media screen and (max-width: 600px) {
+    .first-one {
+        width: 90%; /* Make product cards take up more space */
+        margin-bottom: 20px;
+        height: 400px; /* Adjust card height on mobile */
     }
-    
-    
-    .first-one{
-        height: 28vw;
-        width: 27vw;
-        padding: 6.5vw;
-        
-        margin: 3vw;
-      
-        
-    
+
+    .first-one img {
+        max-height: 150px; /* Smaller image on mobile */
     }
-    
-    .first-one img{
-        height: 10vw;
-        object-fit: contain;
-        margin-bottom: 2vw;
-    
-    
-        
-    
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+/* For Medium Screens (Tablets) */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .first-one {
+        width: 45%; /* Two columns on tablets */
+        height: 420px; /* Keep consistent height on tablets */
+    }
+}
+
+/* For Larger Screens (Desktops) */
+@media screen and (min-width: 1024px) {
+    .first-one {
+        width: 30%; /* Three columns on large screens */
+        height: 420px; /* Keep consistent height on large screens */
+    }
+}
+
+/* For Extra Large Screens (Wider Desktops) */
+@media screen and (min-width: 1200px) {
+    .first-one {
+        width: 22%; /* Four columns on extra large screens */
+        height: 420px; /* Keep consistent height on extra large screens */
     }
 }

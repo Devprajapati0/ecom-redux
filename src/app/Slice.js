@@ -21,9 +21,9 @@ export const cartSlice = createSlice({
         updateQuantity: (state, action) => {
             const { id, quantity } = action.payload;
             const productToUpdate = state.find((product) => product.id === id);
-
+        
             if (productToUpdate) {
-                productToUpdate.quantity = quantity;
+                productToUpdate.quantity = Math.max(quantity, 1); // Ensure quantity is at least 1
             }
         },
         

@@ -1,0 +1,38 @@
+/* layout.css */
+
+/* General Layout Styling */
+.layout-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color, #f7f7f7);
+    min-height: 100vh;
+  }
+  
+  /* Layout-specific Styles */
+  header {
+    background-color: var(--header-bg-color, #007bff);
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Outlet Styles */
+  .layout-content > .outlet {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background-color: var(--content-bg-color, #ffffff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

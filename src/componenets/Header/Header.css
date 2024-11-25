@@ -1,39 +1,94 @@
-.main{
+/* Main Header */
+.main {
     display: flex;
-    height: 3vw;
+    align-items: center;
     justify-content: space-between;
-    margin: 3vw;
-    border-bottom: 0.1vw solid #dadada;
+    padding: 1rem 2rem;
+    background-color: #222831;
+    color: #fff;
+    border-bottom: 1px solid #444;
 }
-.main .righ{
+
+/* Left Link */
+.main a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main a:hover {
+    color: #00adb5;
+}
+
+/* Right Section */
+.main .righ {
     display: flex;
-    gap: 5vw;
+    align-items: center;
+    gap: 2rem;
 }
 
-#sily{
-    width: 4vw;
-    height: 3vw;
+.main .righ a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main .righ a:hover {
+    color: #00adb5;
+}
+
+/* Theme Toggle Button */
+#sily {
+    width: 40px;
+    height: 40px;
+    border: none;
     border-radius: 50%;
-    margin-top: 0vw;
-    background-color: aliceblue;
-
-}
-#sily img{
-    width: 4vw;
-    height: 3vw;
-    margin-top: -1vw;
-
+    background-color: #00adb5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width:600px){
-    .main{
-        border-bottom: none;
-        font-size:xx-large;
+#sily:hover {
+    background-color: #00bcd4;
+    transform: scale(1.1);
+}
+
+#sily img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
     }
-}
-@media (min-width:600px){
-    .main{
-        border-bottom: none;
-        font-size:xx-large;
+
+    .main a {
+        font-size: 1.2rem;
+    }
+
+    .main .righ {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    #sily {
+        width: 35px;
+        height: 35px;
+    }
+
+    #sily img {
+        width: 20px;
+        height: 20px;
     }
 }

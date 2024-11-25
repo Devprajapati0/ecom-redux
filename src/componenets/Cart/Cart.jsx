@@ -28,13 +28,24 @@ function Cart() {
   
       <h3><span>Price:</span>{Product.price}</h3>
       {<h3>
-                                <span>Quantity:</span>
-                                <button onClick={() => handleUpdateQuantity(Product.id, Product.quantity - 1)} className='butt'>
-                                    -</button>
-                                {Product.quantity}
-                                <button onClick={() => handleUpdateQuantity(Product.id, Product.quantity + 1)}>
-                                    +</button>
-                            </h3> }
+    <span>Quantity:</span>
+    <button
+        onClick={() =>
+            handleUpdateQuantity(Product.id, Product.quantity - 1)
+        }
+        className="butt"
+    >
+        -
+    </button>
+    <span>{Product.quantity}</span> {/* Display the quantity */}
+    <button
+        onClick={() =>
+            handleUpdateQuantity(Product.id, Product.quantity + 1)
+        }
+    >
+        +
+    </button>
+</h3>}
                           
      
       <button onClick={() => dispatch(remove(Product.id))}>Remove</button>

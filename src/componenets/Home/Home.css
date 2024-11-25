@@ -1,0 +1,122 @@
+/* Home container */
+.home-container {
+    background-color: #f5f5f5; /* Light gray background for the page */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Home header styling */
+  .home-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: #fff; /* White background for header */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+    padding: 30px 20px;
+  }
+  
+  .home-header h1 {
+    font-size: 3rem;
+    color: #333; /* Dark gray for the title */
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
+    color: #555; /* Medium gray for subheading */
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Styling for Products grid and product card */
+  .main-dic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  
+  /* Product card styling */
+  .first-one {
+    background-color: #ffffff; /* White background for each product */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for each card */
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .first-one:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .first-one img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  
+  .first-one h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333; /* Dark gray for product name */
+    margin-bottom: 10px;
+  }
+  
+  .first-one h3 {
+    font-size: 1.1rem;
+    color: #007bff; /* Blue color for product price */
+    font-weight: 500;
+  }
+  
+  button {
+    background-color: #11a9c3; /* Teal background color for buttons */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #09a2b3; /* Darker teal on hover */
+  }
+  
+  button:active {
+    background-color: #008f99; /* Even darker on click */
+  }
+  
+  /* Optional: Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .main-dic {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .first-one {
+      width: 90%;
+      max-width: 350px; /* Responsive card width */
+    }
+  
+    .home-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .home-header p {
+      font-size: 1rem;
+    }
+  }
+  
